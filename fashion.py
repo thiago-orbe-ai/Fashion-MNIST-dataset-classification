@@ -24,7 +24,7 @@ class_names = ['Tshirt/TOP','Trouser','Pullover','Dress','Coat', 'Sandel','Shirt
 add_selectbox = st.sidebar.selectbox('select the model for classification', ('Sequential', 'CNN'))
 
 #Título do App
-st.title("Classificação de pelas - Fashion MNIST dataset")
+st.title("Classificação de peças - Fashion MNIST dataset")
 
 #Funções
 def explore_data(train_images,train_label,test_images):
