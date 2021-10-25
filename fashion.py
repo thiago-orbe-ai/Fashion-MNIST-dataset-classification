@@ -21,7 +21,7 @@ cnn_model = tf.keras.models.load_model("cnn_model") #rede neural convolucional (
 class_names = ['Tshirt/TOP','Trouser','Pullover','Dress','Coat', 'Sandel','Shirt','Sneaker','Bag','Ankle boot'] #tipos de peças
 
 #Configuração da Barra Lateral
-add_selectbox = st.sidebar.selectbox('select the model for classification', ('Sequential', 'CNN', 'About Data'))
+add_selectbox = st.sidebar.selectbox('select the model for classification', ('Sequential', 'CNN'))
 
 #Título do App
 st.title("Classificação de pelas - Fashion MNIST dataset")
@@ -89,26 +89,6 @@ def cnn_archi():
 def seq_archi():
     img=Image.open('seq_model_architecture.png')
     st.image(img)
-
-def about_data(cnn_model,Seq_model):
-    if st.button("Explore Data"):
-        explore_data(train_images,train_labels,test_images)
-    if st.button('CNN ModelSumarry'):
-        CNN_model_summary()
-    if st.button('CNN Model Architecture'):
-        cnn_archi()
-    if st.button('Seq ModelSumarry'):
-        Seq_model_Summary()
-    if st.button('Sequntial model Architecture'):
-        seq_archi()
-    if st.button('sequential model graph'):
-        seq_history_graph()
-    if st.button('CNN model graph'):
-        cnn_history_graph()
-
-if add_selectbox=='About data':
-    about_data(cnn_model,Seq_model)
-
 
 #Carregar arquivo
 
