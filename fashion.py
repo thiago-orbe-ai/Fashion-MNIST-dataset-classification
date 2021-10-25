@@ -37,7 +37,7 @@ def  CNN_model_summary():
     img=Image.open("cnn_summary.PNG")
     st.image(img)
 
-    def  Seq_model_Summary():
+def  Seq_model_Summary():
     img=Image.open("Seq_summary.PNG")
     st.image(img)
     
